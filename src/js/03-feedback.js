@@ -19,7 +19,7 @@ function updateFormData(evt) {
   const { name, value } = evt.target;
   if (feedbackData[name] !== value) {
     feedbackData[name] = value;
-    console.log(feedbackData);
+    // console.log(feedbackData); // Видалив console.log
   }
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(feedbackData));
 }
@@ -38,11 +38,11 @@ function submitFormHandler(evt) {
   const formDataObj = {};
   const formData = new FormData(refs.formEl);
 
-  const email1 = evt;
-  console.log(email1);
+  // const email1 = evt;
+  // console.log(email1); // Видалив console.log
 
   formData.forEach((value, key) => {
-    console.log(key, value);
+    // console.log(key, value); // Видалив console.log
     formDataObj[key] = value;
   });
 
